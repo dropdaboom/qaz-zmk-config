@@ -11,19 +11,10 @@
 #define DEF 0
 #define SYM 1
 #define NUM 2
-#define NAV 3
-#define MOD 4 
+#define MOD 3
 
 / {
         behaviors {        
-                SPC_MOD: tap_dance_0 {            
-                        compatible = "zmk,behavior-tap-dance";            
-                        label = "TAP_DANCE_SPC_MOD";            
-                        #binding-cells = <0>;            
-                        tapping-term-ms = <200>;            
-                        bindings = <&kp SPACE>, <&mo SYM>;        
-                }; 
-
                 ly: layers {
                         compatible = "zmk,behavior-hold-tap";
                         label = "LAYERS TAP HOLD";
@@ -44,17 +35,6 @@
 		};
         };
 
-        combos {
-                compatible = "zmk,combos";
-
-                // both left thumb keys
-                combo_OSLSYM {
-                        timeout-ms = <200>;
-                        key-positions = <30 31>;
-                        bindings = <&slm SYM>;
-                };
-        };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -68,7 +48,7 @@
     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y      &kp U       &kp I       &kp O       &kp P
     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H      &kp J       &kp K       &kp L       &mt LALT ENTER
     &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N      &kp M       &kp COMMA   &kp DOT 
-    &kp LCTRL  &mo SYM    &none       &none       &SPC_MOD      &none      &mo NUM     &kp LSHIFT
+    &kp LCTRL  &mo SYM    &none       &none       &lt MOD SPACE &none      &mo NUM     &kp LSHIFT
             >;
         };
 
