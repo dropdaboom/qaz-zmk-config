@@ -68,7 +68,7 @@
     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y      &kp U       &kp I       &kp O       &kp P
     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H      &kp J       &kp K       &kp L       &mt LALT ENTER
     &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N      &kp M       &kp COMMA   &kp DOT 
-    &kp LCTRL  &mo SYM    &none       &none       &ly MOD SPACE &none      &mo NUM     &kp LSHIFT
+    &kp LCTRL  &mo SYM    &none       &none       &SPC_MOD      &none      &mo NUM     &kp LSHIFT
             >;
         };
 
