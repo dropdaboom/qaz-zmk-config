@@ -16,21 +16,13 @@
 
 / {
         behaviors {        
-                Z_OSLSYM: tap_dance_0 {            
+                SPC_MOD: tap_dance_0 {            
                         compatible = "zmk,behavior-tap-dance";            
-                        label = "TAP_DANCE_OSLSYM";            
+                        label = "TAP_DANCE_SPC_MOD";            
                         #binding-cells = <0>;            
                         tapping-term-ms = <200>;            
-                        bindings = <&kp Z>, <&slm SYM>;        
-                };  
-
-                DOT_SHFT: tap_dance_0 {            
-                        compatible = "zmk,behavior-tap-dance";            
-                        label = "TAP_DANCE_DOT_SHFT";            
-                        #binding-cells = <0>;            
-                        tapping-term-ms = <200>;            
-                        bindings = <&kp DOT>, <&kp LSHIFT>;        
-                };     
+                        bindings = <&kp SPACE>, <&mo SYM>;        
+                }; 
 
                 ly: layers {
                         compatible = "zmk,behavior-hold-tap";
