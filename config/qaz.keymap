@@ -100,29 +100,15 @@
                         >;
                 };
 
-                nav_layer {
-// -----------------------------------------------------------------------------------------
-// | RESET  |        |        |    |    |   |  PSCRN  |  PG_UP  |  UP    |  PG_DN  |  BSPC  |
-// | BT CLR | BT PRV | BT NXT |    |    |   |         |  LEFT   |  DOWN  |  RIGHT  |  ENTER |
-// |        |        |        |    |    |   |         |         |        |
-// |  LCTRL  |  SYM  |    |    |  SPC  |   |  NUM  |  LSHIFT  |
-                        bindings = <
-    &bootloader  &none        &none         &none   &none      &none   &none   &none  &none  &none
-    &bt BT_CLR   &bt BT_PRV   &bt BT_NXT    &none   &none      &none   &none   &none  &none  &none
-    &none        &none        &none         &none   &none      &none   &none   &none  &none
-    &none        &none        &none         &none   &none      &none   &none   &none 
-                        >;
-                };
-
                 mod_layer {
 // -----------------------------------------------------------------------------------------
 // | TAB     |  ALT     |  CTRL     |  DEL       |    |  PSCRN  |  PG_UP  |  UP    |  PG_DN  |  BSPC  |
 // | SK LGUI |  SK ALT  |  SK SHFT  |  SK LCTRL  |    |         |  LEFT   |  DOWN  |  RIGHT  |        |
-// |         |          |           |            |    |   NAV   |         |         |        |
+// |         |          |           |            |    |  RESET  |  BT PRV | BT NXT |  BT CLR |
                         bindings = <
-    &kp TAB   &kp LALT   &kp LCTRL   &kp DEL     &trans     &kp PSCRN   &kp PG_UP   &kp UP    &kp PG_DN  &kp BSPC
-    &sk LGUI  &sk LALT   &sk LSHFT   &sk LCTRL   &trans     &none       &kp LEFT    &kp DOWN  &kp RIGHT  &none  
-    &slm SYM  &trans     &trans      &trans      &trans     &mo NAV     &none       &none     &none
+    &kp TAB   &kp LALT   &kp LCTRL   &kp DEL     &trans     &kp PSCRN   &kp PG_UP   &kp UP      &kp PG_DN  &kp BSPC
+    &sk LGUI  &sk LALT   &sk LSHFT   &sk LCTRL   &trans     &none       &kp LEFT    &kp DOWN    &kp RIGHT  &none  
+    &slm SYM  &trans     &trans      &trans      &trans     &bootloader &bt BT_PRV  &bt BT_NXT  &bt BT_CLR
     &none     &none      &none       &none       &none      &none       &none       &none 
                         >;
                 };
