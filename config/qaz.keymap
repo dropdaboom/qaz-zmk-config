@@ -34,7 +34,7 @@
 	};
     	combo_TAB {
             timeout-ms = <50>;
-            key-positions = <10 11>;
+            key-positions = <10 12>;
             bindings = <&kp TAB>;
 	};
     	combo_LGUI {
