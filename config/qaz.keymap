@@ -53,6 +53,7 @@
         };
     };
 };
+
 / {
         behaviors {        
                 ly: layers {
@@ -75,6 +76,7 @@
 		};
         };
 };
+
 / {
 &sl {
     release-after-ms = <2000>;
