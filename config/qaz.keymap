@@ -78,15 +78,15 @@
 };
 
 / {
-&sl {
-    release-after-ms = <2000>;
+	&sl {
+    		release-after-ms = <2000>;
+	};
 };
-
 / {
-&mt {
-    tapping-term-ms = <400>;
-};
-
+	&mt {
+    		tapping-term-ms = <400>;
+	};
+}
 / {
         keymap {
                 compatible = "zmk,keymap";
