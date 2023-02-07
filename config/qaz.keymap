@@ -60,7 +60,7 @@
 
     nav {
     
-//   | ESC |     |     |     |     |     |     |     |     |       |
+//   | ESC |     |     |     |     |     |     |     |     | BKSP  |
 //   |  TAB  |     |     |     |     |     |     |     |     |     |
 //   |  SHIFT  |     |     |     |     |     |      |     |   L2   |
 //   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L1  |RIGHT|DOWN |LEFT |
