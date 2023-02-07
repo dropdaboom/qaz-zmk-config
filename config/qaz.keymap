@@ -30,12 +30,13 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
+        
 //   |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |   P   |
 //   |   A   |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  '  |
 //   |    Z    |  X  |  C  |  V  |  B  |  N  |  M  |  UP  |   L2   |
 //   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L1  |RIGHT|DOWN |LEFT |
 
+            bindings = <
     &kp Q      &kp W      &kp E       &kp R       &kp T  &kp Y  &kp U       &kp I       &kp O      &kp P
     &kp A &kp S &kp D &kp F &kp G  &kp H  &kp J &kp K &kp L &kp SQT
     &hm Z RSHIFT               &kp X       &kp C       &kp V  &kp B  &kp N       &kp M       &kp UP &mo 2
@@ -43,20 +44,31 @@
             >;
         };
         num_sym {
+        
+//   |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |   0   |
+//   |   -   |  =  |     |     |     |     |  \  |  {  |  }  |  :  |
+//   |         |     |     |     |     |     |      |  /  |   L2   |
+//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L1  |RIGHT|DOWN |LEFT |
+
             bindings = <
     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5 &kp N6 &kp N7     &kp N8      &kp N9    &kp N0
-    &trans     &trans     &trans     &trans     &trans &trans &trans     &trans      &kp EQUAL &kp MINUS
+    &trans     &trans     &trans   &trans &kp BSLH  &kp LBKT      &kp RBKT  &kp MINUS      &kp EQUAL &kp SEMI
     &kp DEL               &none      &none      &none  &none  &none      &none       &kp SQT     &kp DOT
-    &bootloader &reset    &none         &trans        &trans             &kp RET     &trans    &kp FSLH
+    &trans &trans    &trans         &trans        &trans             &kp RET     &trans    &kp FSLH
             >;
         };
 
     nav {
+    
+//   | ESC |     |     |     |     |     |     |     |     |       |
+//   |  TAB  |     |     |     |     |     |     |     |     |     |
+//   |  SHIFT  |     |     |     |     |     |      |     |   L2   |
+//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L1  |RIGHT|DOWN |LEFT |
             bindings = <
-    &bt BT_CLR &bt BT_NXT &bt BT_PRV &none       &none &none &none       &kp UP       &none     &kp BSPC
-    &trans     &trans     &trans     &trans      &none &none &kp LEFT    &kp DOWN     &kp RIGHT &none
-    &none                 &none      &none       &none &none &none       &none        &none     &none
-    &none      &none      &none         &trans        &trans             &kp RET      &trans    &kp FSLH
+    &kp ESC &trans &trans &none       &none &none &none       &kp UP       &none     &kp BSPC
+    &kp TAB    &trans     &trans     &trans      &none &none &kp LEFT    &kp DOWN     &kp RIGHT &none
+    &kp Shift                 &none      &none       &none &none &none       &none        &none     &none
+    &trans      &trans      &trans        &trans        &trans             &kp RET      &trans    &kp FSLH
             >;
         };
     };
