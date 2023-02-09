@@ -53,7 +53,7 @@
             bindings = <
     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9   &kp N0
     &trans   &trans   &trans   &trans   &kp BSLH  &kp LBKT  &kp RBKT  &kp MINUS &kp EQUAL  &kp SEMI
-    &kp DEL     &none      &none      &none     &none      &none      &none    &kp COMMA     &kp SLH
+    &kp DEL     &none      &none      &none     &none      &none      &none    &kp COMMA     &kp FSLH
     &trans &trans    &trans         &trans        &trans             &kp RET     &trans    &kp FSLH
             >;
         };
