@@ -33,58 +33,58 @@
         default_layer {
         
 //   |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |   P   |
-//   |   A   |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  '  |
-//   |    Z    |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |   .    |
-//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |RIGHT|DOWN |LEFT |
+//   |A/CAPS |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  '  |
+//   | Z/LSHIFT|X/RS |  C  |  V  |  B  |  N  |  M  |  ,  |  ./L3   |
+//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |S_A_W|D_BRI|I_BRI|
 
             bindings = <
     &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I  &kp O  &kp P
-    &kp A  &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K  &kp L  &kp SQT
-    &mt RSHIFT Z   &mt RSHIFT X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp UP &lt 3 DOT
-    &kp LCTRL &kp LGUI &kp LALT &lt 1 SPACE  &lt 2 SPACE &kp LEFT &kp DOWN &kp RIGHT  &none
+    &mt CAPS A  &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K  &kp L  &kp RET
+    &mt RSHIFT Z   &mt RSHIFT X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA &lt 3 DOT
+    &kp LCTRL &kp LGUI &kp LALT &lt 1 SPACE  &lt 2 SPACE &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_BRI_DEC &kp C_BRI_INC  &none
             >;
         };
         num_sym {
         
 //   |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |   0   |
-//   |       |     |     |  `  |  \  |  {  |  }  |  -  |  =  |  :  |
-//   |         |     |     |     |     |     |     |  UP  |    .    |
+//   |       |     |     |  `  |  \  |  {  |  }  |  -  |  =  |  '  |
+//   |         |     |     |     |     |     |     |  UP  | RSHIFT |
 //   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |RIGHT|DOWN |LEFT |
 
             bindings = <
     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9   &kp N0
-    &trans   &trans   &trans   &kp GRAVE   &kp BSLH  &kp LBKT  &kp RBKT  &kp MINUS &kp EQUAL  &mt TAB SEMI
-    &trans     &none      &none      &none     &none      &none      &none    &kp COMMA     &mt LSHIFT FSLH
-   &trans &trans    &trans        &trans        &trans             &kp RET     &trans    &kp FSLH  &none
+    &trans   &trans   &trans   &kp GRAVE   &kp BSLH  &kp LBKT  &kp RBKT  &kp MINUS &kp EQUAL  &kp APOS
+    &trans     &none      &none      &none     &none      &none      &none    &kp FSLH     &mt RSHIFT
+   &trans &trans    &trans        &trans        &trans             &trans     &trans    &trans  &none
             >;
         };
 
     nav {
     
 //   | ESC | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | BKSP  |
-//   |  TAB  | BT0 | BT1 | BT2 | BT3 | F9  | F10 | F11 | F12 |BTCLR|
-//   |  SHIFT  |CAPS |     |     |     |     |VOLMT|VOLDN| VOLUP   |
-//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |MPREV| PP |MNEXT |
+//   |  TAB  |CAPS |     |     |     |  F9  | F10 | F11 |F12 |ENTER|
+//   |  SHIFT  |     |     |     |     |     |     |  UP | RSHIFT  |
+//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |LEFT|DOWN |RIGHT |
 
             bindings = <
-    &kp ESC  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5      &kp F6       &kp F7   &kp F8   &kp BSPC
-    &kp TAB  &bt BT_CLR &bt BT_NXT &bt BT_PRV &none &kp F9 &kp F10   &kp F11  &kp F12  &kp RET
-    &kp LSHIFT       &kp CAPS       &none      &none      &none      &none    &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP
-   &trans     &trans      &trans       &trans              &trans              &kp C_PREV &kp C_PP &kp C_NEXT  &none
+    &kp ESC  &kp F1 &kp F2  &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp BSPC
+    &kp TAB  &kp CAPS &none  &none  &none  &kp F9  &kp F10   &kp F11  &kp F12  &kp RET
+    &none       &none   &none    &none   &none   &none  &none  &kp UP   &kp RSHIFT
+    &trans  &trans    &trans     &trans    &trans   &kp LEFT &kp DOWN &kp RIGHT  &none
             >;
         };
       bt {
     
-//   | ESC | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | BKSP  |
-//   |  TAB  | BT0 | BT1 | BT2 | BT3 | F9  | F10 | F11 | F12 |BTCLR|
-//   |  SHIFT  |CAPS |     |     |     |     |VOLMT|VOLDN| VOLUP   |
-//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |MPREV| PP |MNEXT |
+//   |     |     |     |     |     |     |     |     |      |      |
+//   |       | BT0 | BT1 | BT2 | BT3 | F9  | F10 | F11 | F12 |BTCLR|
+//   |               |     |     |     |     |     |     |         |
+//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2 |     |     |      |
 
             bindings = <
-    &kp ESC  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5      &kp F6       &kp F7   &kp F8   &kp BSPC
-    &kp TAB  &bt BT_CLR &bt BT_NXT &bt BT_PRV &none &kp F9 &kp F10   &kp F11  &kp F12  &kp RET
-    &kp LSHIFT       &kp CAPS       &none      &none      &none      &none    &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP
-   &trans     &trans      &trans       &trans              &trans              &kp C_PREV &kp C_PP &kp C_NEXT  &none
+    &none  &none   &none    &none       &none      &none      &none       &none   &none   &none
+    &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none   &none  &none  &bt BT_CLR
+    &none       &kp CAPS       &none      &none      &none         &none &none &none &none
+   &trans     &trans      &trans       &trans              &trans              &none &none &none  &none
             >;
         };       
     };
