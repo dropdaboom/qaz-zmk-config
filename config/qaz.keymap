@@ -39,7 +39,7 @@
 
             bindings = <
     &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I  &kp O  &kp P
-    &mt CAPS A  &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K  &kp L  &kp RET
+    &mt CAPS A  &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K  &kp L  &kp APOS
     &mt RSHIFT Z   &mt RSHIFT X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA &lt 3 DOT
     &kp LCTRL &kp LGUI &kp LALT &lt 1 SPACE  &lt 2 SPACE &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_BRI_DEC &kp C_BRI_INC  &none
             >;
@@ -53,7 +53,7 @@
 
             bindings = <
     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9   &kp N0
-    &trans   &trans   &trans   &kp GRAVE   &kp BSLH  &kp LBKT  &kp RBKT  &kp MINUS &kp EQUAL  &kp APOS
+    &trans   &trans   &trans   &kp GRAVE   &kp BSLH  &kp LBKT  &kp RBKT  &kp MINUS &kp EQUAL  &kp SEMI
     &trans     &none      &none      &none     &none      &none      &none    &kp FSLH     &mt RSHIFT
    &trans &trans    &trans        &trans        &trans             &trans     &trans    &trans  &none
             >;
