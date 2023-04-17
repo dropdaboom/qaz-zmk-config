@@ -13,18 +13,6 @@
 #define NAV     2
 #define BT      3
 
-/ {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
-            #binding-cells = <2>;
-            tapping-term-ms = <225>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
-};
 
 / {
     keymap {
@@ -35,13 +23,13 @@
 //   |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |   P   |
 //   |A/CAPS |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  '  |
 //   | Z/LSHIFT|X/RS |  C  |  V  |  B  |  N  |  M  |  ,  |  ./L3   |
-//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |S_A_W|D_BRI|I_BRI|
+//   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2  |RIGHT|DOWN |LEFT |
 
             bindings = <
-    &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I  &kp O  &kp P
-    &kp A  &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K  &kp L  &kp APOS
-    &mt RSHIFT Z   &mt RSHIFT X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA &lt 3 DOT
-    &kp DOT &kp LGUI &kp LALT &lt 1 SPACE  &lt 2 SPACE &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_BRI_DEC &kp C_BRI_INC  &none
+    &kp Q   &lt 2 W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I  &lt 2 O  &kp P
+    &kp A  &lt 2 S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K  &lt 2 L  &kp APOS
+    &mt RSHIFT Z   &mt RSHIFT X   &kp C   &kp V   &kp B   &kp N   &lt 2 M  &kp COMMA &lt 3 DOT
+    &kp DOT &kp LGUI &kp LALT &lt 1 SPACE  &lt 2 SPACE &kp LEFT &kp DOWN &kp RIGHT &none
             >;
         };
         num_sym {
@@ -55,7 +43,7 @@
     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9   &kp N0
     &trans   &trans   &trans   &kp GRAVE   &kp BSLH  &kp LBKT  &kp RBKT  &kp MINUS &kp EQUAL  &kp SEMI
     &trans     &none      &none      &none     &none      &none      &none    &kp FSLH     &mt RSHIFT
-   &trans &trans    &trans        &trans        &trans             &trans     &trans    &trans  &none
+   &trans &trans    &trans        &trans        &trans              &trans &trans &trans &none
             >;
         };
 
@@ -69,20 +57,20 @@
             bindings = <
     &kp ESC  &kp F1 &kp F2  &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp BSPC
     &kp TAB  &kp CAPS &none  &none  &none  &kp F9  &kp F10   &kp F11  &kp F12  &kp RET
-    &none       &none   &none    &none   &none   &none  &none  &kp UP   &kp RSHIFT
-    &trans  &trans    &trans     &trans    &trans   &kp LEFT &kp DOWN &kp RIGHT  &none
+    &none       &none   &none    &none   &none   &none  &none  &kp UP  &kp RSHIFT
+    &trans  &trans    &trans     &trans    &trans   &trans     &trans    &trans  &none
             >;
         };
       bt {
     
 //   |     |     |     |     |     |     |     |     |      |      |
-//   |       | BT0 | BT1 | BT2 | BT3 | F9  | F10 | F11 | F12 |BTCLR|
+//   |       |     |     |     |     | F9  | F10 | F11 | F12 |BTCLR|
 //   |               |     |     |     |     |     |     |         |
 //   |CTRL | WIN | ALT |  SPACE/L1   | SPACE/L2 |     |     |      |
 
             bindings = <
     &none  &none   &none    &none       &none      &none      &none       &none   &none   &none
-    &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none   &none  &none  &bt BT_CLR
+    &none  &bt BT_SEL 0 &bt BT_SEL 1 &none &none &none &none   &none  &none  &bt BT_CLR
     &none       &kp CAPS       &none      &none      &none         &none &none &none &none
    &trans     &trans      &trans       &trans              &trans              &none &none &none  &none
             >;
