@@ -29,7 +29,7 @@
     &kp Q   &lt 2 W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I  &lt 2 O  &kp P
     &kp A  &lt 2 S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K  &lt 2 L  &kp APOS
     &mt RSHIFT Z   &mt RSHIFT X   &kp C   &kp V   &kp B   &kp N   &lt 2 M  &kp COMMA &lt 3 DOT
-    &kp DOT &kp LGUI &kp LALT &lt 1 SPACE  &lt 2 SPACE &kp LEFT &kp DOWN &kp RIGHT &none
+    &kp LCTRL &kp LGUI &kp LALT &lt 1 SPACE  &lt 2 SPACE &kp LEFT &kp DOWN &kp RIGHT &none
             >;
         };
         num_sym {
